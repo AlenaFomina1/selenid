@@ -31,7 +31,7 @@ public class TestCard {
         $("[name=\"phone\"]").setValue("+79111111111");
         $("[data-test-id=\"agreement\"]").click();
         $x("//*[text()=\"Забронировать\"]").click();
-        $(withText("Успешно!")).should(visible, Duration.ofSeconds(1));
+        $(withText("Успешно!")).should(visible, Duration.ofSeconds(18));
         $("[data-test-id='notification'] .notification__content").shouldHave(Condition.exactText("Встреча успешно забронирована на " + planningDate));
     }
 }
